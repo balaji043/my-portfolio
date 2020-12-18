@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #0e1878;
+  --color-secondary: #3646e5;
+  --color-grey-dark: #5c6086;
+  --color-grey-medium: #d1d6ff;
+  --color-grey-ligt: #EEFOFF;
+  --color-white: #ffffff;
+  --font-headings: "Poppins", sans-serif;
+  --font-body: 'Noto Sans', sans-serif;
+}
+
+b,
+strong {
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  margin: 0;
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding-inline-start: 32px;
+}
+
+body {
+  font-family: var(--font-headings);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
