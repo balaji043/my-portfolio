@@ -34,16 +34,13 @@ const TopNavBar: FC<ComponentProps> = ({ className }: ComponentProps) => {
         <>
             {
                 pages.map(
-                    (titleItem: PageItem) => {
-                        console.log(className);
-
-                        return <TopNavButton
+                    (titleItem: PageItem) =>
+                        <TopNavButton
                             key={titleItem.title + key}
                             title={titleItem.title}
                             className={className}
                             to={titleItem.to}
                         />
-                    }
                 )
             }
         </>
