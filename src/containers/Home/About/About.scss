@@ -44,11 +44,16 @@ $left-width: 714px;
   }
 
   &__name {
-    font-size: 30px;
     font-weight: 800;
     line-height: 1.25;
 
-    @media (min-width: 450px) {
+    @media (min-width: 300px) {
+      font-size: 30px;
+    }
+    @media (min-width: 600px) {
+      font-size: 40px;
+    }
+    @media (min-width: 1000px) {
       font-size: 80px;
       max-width: 750px;
     }
