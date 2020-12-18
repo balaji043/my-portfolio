@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import "./About.scss"
 import { aboutTexts } from 'utils';
+import "./About.scss"
 
 const About: FC = () => {
     return (

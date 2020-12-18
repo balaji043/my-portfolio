@@ -1,11 +1,11 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, ReactNode, useEffect } from 'react';
 import clsx from 'clsx';
 import "./Layout.scss"
 import { useLocation } from 'react-router-dom';
 import TopNavBar from 'components/TopNavBar';
 
 interface ComponentProps {
-    className?: string;
+    children: ReactNode;
 }
 
 const Layout: FC<ComponentProps> = ({children}) => {

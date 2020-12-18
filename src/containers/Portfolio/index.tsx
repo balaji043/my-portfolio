@@ -1,19 +1,14 @@
 import React, { FC } from 'react';
-import clsx from 'clsx';
 import "./Portfolio.scss"
 import { PageTitle } from 'components';
 
-interface ComponentProps { 
-    className?: string; 
-}
-
-const Portfolio: FC<ComponentProps> = ({ className }: ComponentProps) => { 
+const Portfolio: FC = () => {
     return (
-        <div className={clsx('Portfolio', className)}>
+        <div className='Portfolio'>
             <PageTitle />
             Portfolio
         </div>
-    ); 
-} 
+    );
+}
 
 export default Portfolio;

@@ -1,19 +1,15 @@
 import React, { FC } from 'react';
-import clsx from 'clsx';
 import "./Works.scss"
 import { PageTitle } from 'components';
 
-interface ComponentProps { 
-    className?: string; 
-}
 
-const Works: FC<ComponentProps> = ({ className }: ComponentProps) => { 
+const Works: FC = () => {
     return (
-        <div className={clsx('Works', className)}>
+        <div className={'Works'}>
             <PageTitle />
             Works
         </div>
-    ); 
-} 
+    );
+}
 
 export default Works;

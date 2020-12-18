@@ -56,7 +56,7 @@ $top-nav-height: 60px;
     }
 
     &__items {
-      margin-top: 5px;
+      margin-top: 10px;
     }
     &__button {
       background: transparent;
@@ -79,7 +79,7 @@ $top-nav-height: 60px;
       display: flex;
       height: $dropdown-height;
       right: 0;
-      padding: 30px 60px 30px 60px;
+      padding: 20px 60px 30px 60px;
       position: absolute;
       top: $top-nav-height;
       z-index: 2;
