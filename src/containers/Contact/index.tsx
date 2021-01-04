@@ -6,7 +6,7 @@ import { PageTitle } from 'components';
 const Contact: FC = () => {
     return (
         <div className='Contact'>
-            <PageTitle />
+            <PageTitle  title='CONTACT'/>
             Contact
         </div>
     );

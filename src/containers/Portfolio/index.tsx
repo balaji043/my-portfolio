@@ -5,7 +5,7 @@ import { PageTitle } from 'components';
 const Portfolio: FC = () => {
     return (
         <div className='Portfolio'>
-            <PageTitle />
+            <PageTitle title='PORTFOLIO'/>
             Portfolio
         </div>
     );
