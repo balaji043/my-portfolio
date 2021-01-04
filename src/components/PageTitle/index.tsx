@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
-import { getPathTitle } from 'utils';
 
-const PageTitle: FC = () => {
-  const { pathname } = useLocation();
+type ComponentProps = {
+  title: string;
+}
+const PageTitle: FC<ComponentProps> = ({ title }) => {
 
   return (
     <Helmet>
-      <title>{getPathTitle(pathname)} | balaji</title>
+      <title>{title} | balaji</title>
     </Helmet>
   );
 };
