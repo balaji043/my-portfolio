@@ -8,7 +8,7 @@ import About from './About';
 const Home: FC = () => {
     return (
         <>
-            <PageTitle />
+            <PageTitle title='HOME' />
             <HomeHero />
             <About />
         </>
