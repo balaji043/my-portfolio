@@ -1,19 +1,17 @@
-import Layout from 'components/Layout';
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { pages } from 'utils';
+import { BrowserRouter } from 'react-router-dom';
+import NavLayout from 'components/NavLayout'
+
+import { GlobalStyle } from 'styles';
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Layout>
-        <Switch>
-          {pages.map(e => <Route key={'route' + e.to} exact path={e.to} component={e.component} />)}
-
-        </Switch>
-      </Layout>
-    </BrowserRouter>
+    <>
+      <GlobalStyle />
+      <BrowserRouter>
+        <NavLayout />
+      </BrowserRouter>
+    </>
   );
 }
 
