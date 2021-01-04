@@ -11,35 +11,39 @@ export interface PageItem {
     component: React.ComponentType;
 }
 
+export const homePageItem = {
+    title: "home",
+    to: "/",
+    component: Home
+};
+export const workPageItem = {
+    title: "works",
+    to: "/works",
+    component: Works
+};
+export const portfolioPageItem = {
+    title: "portfolio",
+    to: "/portfolio",
+    component: Portfolio
+};
+export const toolsPageItem = {
+    title: "tools",
+    to: "/tools",
+    component: Tools
+};
+export const contactsPageItem = {
+    title: "contact",
+    to: "/contact",
+    component: Contact
+};
+
+
+
 
 export const pages: PageItem[] = [
-    {
-        title: "home",
-        to: "/",
-        component: Home
-    },
-    {
-        title: "works",
-        to: "/works",
-        component: Works
-    },
-    {
-        title: "portfolio",
-        to: "/portfolio",
-        component: Portfolio
-    },
-    {
-        title: "tools",
-        to: "/tools",
-        component: Tools
-    },
-    {
-        title: "contact",
-        to: "/contact",
-        component: Contact
-    },
+    homePageItem,
+    workPageItem,
+    portfolioPageItem,
+    toolsPageItem,
+    contactsPageItem,
 ]
-
-export const getPathTitle = (location: string) => {
-    return pages.find(e => e.to === location)?.title;
-}
