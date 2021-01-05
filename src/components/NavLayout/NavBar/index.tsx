@@ -1,4 +1,4 @@
-import {MenuBarIcon } from 'components/Icons'
+import { MenuBarIcon } from 'components/Icons'
 import React, { FC } from 'react'
 import { homePageItem } from 'utils/pages'
 import { MobileMenuIcon, Nav, NavBarContainer, NavIcon, NavItem, NavLink, NavLogo, NavMenu } from './NavBarElements'

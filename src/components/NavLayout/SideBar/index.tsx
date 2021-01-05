@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { SideBarContainer, Icon, SideBarLink, SideBarMenu, SideBarWrapper, CloseIcon } from './SideBarElements'
+import { SideBarContainer, Icon, SideBarLink, SideBarMenu, SideBarWrapper, CloseIcon, SideBarTop, NavIcon } from './SideBarElements'
 
 type SideBarProps = {
     isSideBarOpen: boolean;
@@ -9,9 +9,12 @@ type SideBarProps = {
 const SideBar: FC<SideBarProps> = ({ isSideBarOpen, toggleSideBar }) => {
     return (
         <SideBarContainer isOpen={isSideBarOpen} onClick={toggleSideBar}>
-            <Icon onClick={toggleSideBar}>
-                <CloseIcon />
-            </Icon>
+            <SideBarTop>
+                <NavIcon />
+                <Icon onClick={toggleSideBar}>
+                    <CloseIcon />
+                </Icon>
+            </SideBarTop>
             <SideBarWrapper>
                 <SideBarMenu>
                     <SideBarLink to="home" onClick={toggleSideBar}>

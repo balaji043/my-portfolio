@@ -4,72 +4,78 @@ import { color } from 'styles';
 import AppLogo from 'assets/svgs/Logo';
 
 const screenMaxWidth = `960px`;
-const navHeight = 60;
+const navHeight = `90px`;
+const largeIconSize = `54px`;
+const smallIconSize = `36px`;
 
 export const Nav = styled.nav`
 background: ${color.secondary};
-height: ${navHeight}px;
-/* margin-top: ${-navHeight}px; */
+height: ${navHeight};
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 1rem;
 position: sticky;
 top: 0px;
-z-index: 10;
-@media screen and (max-width: ${screenMaxWidth} ){
-    transition: 0.8s all ease; 
-}
+z-index: 999;
 `
+
 export const NavBarContainer = styled.div`
 display: flex;
 justify-content: space-between;
 height: ${navHeight};
 z-index: 1;
 width: 100%;
-padding: 0 2rem;
+align-items: center;
+padding-left: 4rem;
+padding-right: 6rem;
+padding-top: 2rem;
+padding-bottom: 2rem;
+@media screen and (max-width: ${screenMaxWidth}) {
+    align-items: flex-start;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+}
 `
+
+
 export const NavLogo = styled(LinkRouter)`
 color: ${color.black};
-justify-self: flex-start;
 cursor: pointer;
-display: flex;
 align-items: center;
 `
 
 export const NavIcon = styled(AppLogo)`
-margin-right: 0.5rem;
-width: 36px;
-height: 36px;
+width: ${largeIconSize};
+height: ${largeIconSize};
+@media screen and (max-width: ${screenMaxWidth}) {
+    width: ${smallIconSize};
+    height: ${smallIconSize};
+}
 `
 
 export const MobileMenuIcon = styled.div`
 display: none;
 @media screen and (max-width: ${screenMaxWidth}) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
     color: ${color.black}
 }
 `
+
 export const NavMenu = styled.ul`
 display: flex;
 align-items: center;
 list-style: none;
 text-align: center;
-margin-right: -22px;
 @media screen and (max-width: ${screenMaxWidth}){
     display: none;
 }
 `
 
-
 export const NavItem = styled.li`
-height: ${navHeight};
+height: 45px;
 `
 
 export const NavLink = styled(LinkScroll)`
@@ -77,13 +83,13 @@ color: ${color.black};
 display: flex;
 align-items: center;
 text-decoration: none;
-padding: 0 1rem;
 height: 100%;
-cursor: pointer;
-font-size: smaller;
-font-weight: bold;
-
-&.active {
- border-bottom: 3px solid ${color.black};   
+font-weight: 600;cursor: pointer;
+font-size: 14px;
+padding-right: .6rem;
+padding-left: .6rem;
+&:active {
+    border-bottom: 3px solid ${color.black};   
+    font-weight: bold;
 }
 `
