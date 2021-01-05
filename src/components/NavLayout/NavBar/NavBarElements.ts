@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { LinkRouter, LinkScroll } from 'components/Router';
+import { LinkRouter } from 'components/Router';
 import { color } from 'styles';
 import AppLogo from 'assets/svgs/Logo';
 
@@ -78,7 +78,7 @@ export const NavItem = styled.li`
 height: 45px;
 `
 
-export const NavLink = styled(LinkScroll)`
+export const NavLink = styled(LinkRouter)`
 color: ${color.black};
 display: flex;
 align-items: center;
