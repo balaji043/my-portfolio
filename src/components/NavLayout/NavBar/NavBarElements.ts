@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { LinkRouter, LinkScroll } from 'components/Router';
 import { color } from 'styles';
+import AppLogo from 'assets/svgs/Logo';
 
 const screenMaxWidth = `960px`;
 const navHeight = 60;
@@ -26,18 +27,20 @@ justify-content: space-between;
 height: ${navHeight};
 z-index: 1;
 width: 100%;
-padding: 0 100px;
+padding: 0 2rem;
 `
 export const NavLogo = styled(LinkRouter)`
 color: ${color.black};
 justify-self: flex-start;
 cursor: pointer;
-font-size: 1.5rem;
 display: flex;
 align-items: center;
-margin-left: 24px;
-font-weight: bold;
-text-decoration: none;
+`
+
+export const NavIcon = styled(AppLogo)`
+margin-right: 0.5rem;
+width: 36px;
+height: 36px;
 `
 
 export const MobileMenuIcon = styled.div`
@@ -77,9 +80,10 @@ text-decoration: none;
 padding: 0 1rem;
 height: 100%;
 cursor: pointer;
+font-size: smaller;
+font-weight: bold;
 
 &.active {
- border-bottom: 3px solid ${color.white};   
+ border-bottom: 3px solid ${color.black};   
 }
-
 `
