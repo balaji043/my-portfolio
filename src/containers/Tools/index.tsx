@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import "./Tools.scss"
 import { PageTitle } from 'components';
 
 const Tools: FC = () => {

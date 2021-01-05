@@ -1,15 +1,11 @@
-import React, { FC } from 'react';
-import "./Works.scss"
-import { PageTitle } from 'components';
+import React from 'react'
 
-
-const Works: FC = () => {
+const Works = () => {
     return (
-        <div className={'Works'}>
-            <PageTitle title='WORKS'/>
-            Works
+        <div>
+            
         </div>
-    );
+    )
 }
 
-export default Works;
+export default Works
