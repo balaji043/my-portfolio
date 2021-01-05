@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { pageItems } from 'utils/pages'
 import { SideBarContainer, Icon, SideBarLink, SideBarMenu, SideBarWrapper, CloseIcon, SideBarTop, NavIcon } from './SideBarElements'
 
 type SideBarProps = {
@@ -17,21 +18,14 @@ const SideBar: FC<SideBarProps> = ({ isSideBarOpen, toggleSideBar }) => {
             </SideBarTop>
             <SideBarWrapper>
                 <SideBarMenu>
-                    <SideBarLink to="home" onClick={toggleSideBar}>
-                        home
-                   </SideBarLink>
-                    <SideBarLink to="works" onClick={toggleSideBar}>
-                        works
-                   </SideBarLink>
-                    <SideBarLink to="portfolio" onClick={toggleSideBar}>
-                        portfolio
-                   </SideBarLink>
-                    <SideBarLink to="tools" onClick={toggleSideBar}>
-                        tools
-                   </SideBarLink>
-                    <SideBarLink to="contact" onClick={toggleSideBar}>
-                        contact
-                   </SideBarLink>
+                    {
+                        pageItems.map(
+                            e =>
+                                <SideBarLink key={e.to} to={e.to} onClick={toggleSideBar}>
+                                    {e.title}
+                                </SideBarLink>
+                        )
+                    }
                 </SideBarMenu>
             </SideBarWrapper>
         </SideBarContainer>

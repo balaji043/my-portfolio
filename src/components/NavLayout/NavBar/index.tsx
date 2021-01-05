@@ -1,6 +1,6 @@
 import { MenuBarIcon } from 'components/Icons'
 import React, { FC } from 'react'
-import { homePageItem } from 'utils/pages'
+import { homePageItem, PageItem, pageItems } from 'utils/pages'
 import { MobileMenuIcon, Nav, NavBarContainer, NavIcon, NavItem, NavLink, NavLogo, NavMenu } from './NavBarElements'
 
 type NavBarProps = {
@@ -8,6 +8,11 @@ type NavBarProps = {
 }
 
 const NavBar: FC<NavBarProps> = ({ toggleSideBar }) => {
+
+    const navItem = (pageItem: PageItem) =>
+        <NavItem key={pageItem.to}>
+            <NavLink to={pageItem.to}>{pageItem.title}</NavLink>
+        </NavItem>;
     return (
         <>
             <Nav>
@@ -19,18 +24,7 @@ const NavBar: FC<NavBarProps> = ({ toggleSideBar }) => {
                         <MenuBarIcon />
                     </MobileMenuIcon>
                     <NavMenu>
-                        <NavItem>
-                            <NavLink to='home'>HOME</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to='about'>ABOUT</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to='works'>WORKS</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink to='contact'>CONTACT</NavLink>
-                        </NavItem>
+                        {pageItems.map(e => navItem(e))}
                     </NavMenu>
                 </NavBarContainer>
             </Nav>

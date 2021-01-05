@@ -1,5 +1,5 @@
 import { AppLogo, CloseSideBarIcon } from 'components/Icons';
-import { LinkScroll } from 'components/Router';
+import { LinkRouter } from 'components/Router';
 import styled from 'styled-components'
 
 import { color } from 'styles';
@@ -66,7 +66,7 @@ text-align: center;
     grid-template-rows: repeat(6, 60px);
 }
 `
-export const SideBarLink = styled(LinkScroll)`
+export const SideBarLink = styled(LinkRouter)`
 display: flex;
 align-items:center;
 justify-content: center;
