@@ -1,9 +1,9 @@
 
 export const homeHeroTexts = {
-    title: 'Design & Develop Beautiful App.',
-    subtitle: "A passionate full stack developer and desinger based in the India.",
+    heading:'creative designer & developer.',
+    subtitle: "Hi I'm Balaji Ramasamy. A passionate full stack application designer and developer based in India",
 }
-
+// A passionate full stack developer and desinger based in the India.
 export const aboutTexts = {
     title: 'Full Stack developer',
     name: 'hi, my name is Balaji Ramasamy',
