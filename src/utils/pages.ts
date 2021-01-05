@@ -1,9 +1,9 @@
 import React from "react";
 import Home from 'containers/Home';
 import Contact from 'containers/Contact'
-import Portfolio from 'containers/Portfolio'
 import Tools from 'containers/Tools'
 import Works from 'containers/Works'
+import About from "containers/About";
 
 export interface PageItem {
     title: string;
@@ -12,38 +12,35 @@ export interface PageItem {
 }
 
 export const homePageItem = {
-    title: "home",
+    title: "HOME",
     to: "/",
     component: Home
 };
+export const aboutPageItem = {
+    title: "ABOUT",
+    to: "/about",
+    component: About
+};
 export const workPageItem = {
-    title: "works",
+    title: "WORKS",
     to: "/works",
     component: Works
 };
-export const portfolioPageItem = {
-    title: "portfolio",
-    to: "/portfolio",
-    component: Portfolio
-};
+
 export const toolsPageItem = {
     title: "tools",
     to: "/tools",
     component: Tools
 };
 export const contactsPageItem = {
-    title: "contact",
+    title: "CONTACT",
     to: "/contact",
     component: Contact
 };
 
-
-
-
-export const pages: PageItem[] = [
+export const pageItems: PageItem[] = [
     homePageItem,
+    aboutPageItem,
     workPageItem,
-    portfolioPageItem,
-    toolsPageItem,
     contactsPageItem,
 ]
