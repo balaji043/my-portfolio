@@ -1,18 +1,11 @@
+import { MyIconProps } from 'components/Icons/Icon';
 import { FC } from 'react';
-import styled from 'styled-components';
-import { color } from 'styles';
-import Icon from 'components/Icons/Icon';
-
-const Svg = styled(Icon)`
-fill: ${color.black};
-`
-
-type Props = {
-    className?: string;
-};
+import Svg from 'components/Icons/Svg'
 
 
-const AppLogo: FC<Props> = ({ className }) => {
+
+
+const AppLogo: FC<MyIconProps> = ({ className }) => {
     return (
         <Svg className={className} width='16px' height='16px' viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="Vector 2">
