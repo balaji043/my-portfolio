@@ -9,6 +9,7 @@ export interface PageItem {
     title: string;
     to: string;
     component: React.ComponentType;
+    btnText?: string;
 }
 
 export const homePageItem = {
@@ -16,15 +17,18 @@ export const homePageItem = {
     to: "/",
     component: Home
 };
+
 export const aboutPageItem = {
     title: "ABOUT",
     to: "/about",
     component: About
 };
+
 export const workPageItem = {
     title: "WORKS",
     to: "/works",
-    component: Works
+    component: Works,
+    btnText: `SEE MY WORKS`
 };
 
 export const toolsPageItem = {
@@ -32,10 +36,12 @@ export const toolsPageItem = {
     to: "/tools",
     component: Tools
 };
+
 export const contactsPageItem = {
     title: "CONTACT",
     to: "/contact",
-    component: Contact
+    component: Contact,
+    btnText: `SAY HELLO`,
 };
 
 export const pageItems: PageItem[] = [
