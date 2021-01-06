@@ -1,14 +1,13 @@
-import { DeveloperActivity } from 'components/Icons';
+import { Programmer } from 'components/Icons';
 import React, { FC } from 'react';
 import { homeHeroTexts } from 'utils';
 import { workPageItem } from 'utils/pages';
-import { HeroContainer, HeroWrapper, HomeRow, Column1, TextWrapper, TopLine, Heading, Subtitle, Column2, ImgWrap, Img, Button, ButtonWrapper } from './HomeHeroElements';
+import { HeroContainer, HomeRow, Column1, TextWrapper, Heading, Subtitle, Column2, ImgWrap, Img, Button, ButtonWrapper } from './HomeHeroElements';
 
 
-const HomeHero: FC = () => {
-    return (
-        <HeroContainer lightBg>
-            <HeroWrapper>
+const HomeHero: FC =
+    () => (
+        <HeroContainer lightBg={true}>
                 <HomeRow >
                     <Column1>
                         <TextWrapper>
@@ -21,13 +20,11 @@ const HomeHero: FC = () => {
                     </Column1>
                     <Column2>
                         <ImgWrap>
-                            <Img src={DeveloperActivity} />
+                            <Img src={Programmer} />
                         </ImgWrap>
                     </Column2>
                 </HomeRow>
-            </HeroWrapper>
         </HeroContainer>
     );
-}
 
 export default HomeHero;
