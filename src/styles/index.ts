@@ -21,7 +21,37 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0px;
     font-family: "Poppins", sans-serif;
     background-color: ${color.secondary};
-}
+};
+
+b,
+strong {
+  font-weight: 800;
+};
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  margin: 0;
+};
+
+a {
+  color: ${color.secondary};
+  text-decoration: none;
+};
+
+p {
+  margin: 0 0 20px;
+};
+
+ol,
+ul {
+  margin: 0;
+  padding-inline-start: 32px;
+};
 `;
 
 export const Container = styled.div`
