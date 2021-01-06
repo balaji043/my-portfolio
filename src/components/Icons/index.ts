@@ -1,9 +1,15 @@
-import AppLogo from "assets/svgs/Logo";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { HiArrowNarrowRight } from "react-icons/hi";
+
+import AppLogo from "assets/svgs/AppLogo";
 import Programmer from 'assets/svgs/programming.svg';
+import Circle from "assets/svgs/Circle";
+
 export {
-    FaBars as MenuBarIcon,
-    FaTimes as CloseSideBarIcon,
+    FaBars as BrMenuBarIcon,
+    FaTimes as BrCloseIcon,
     AppLogo,
-    Programmer
+    Programmer,
+    Circle,
+    HiArrowNarrowRight as BrArrowRight
 }
