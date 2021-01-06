@@ -11,7 +11,10 @@ export type Color = {
 export const color = {
     white: `#ffffff`,
     black: `#363636`,
-    secondary: `#f9f9f9`
+    secondary: `#f9f9f9`,
+    blackFooter: '#141414',
+    darkCircle: '#414141',
+    lightCircle: `#E5E5E5`
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -21,6 +24,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0px;
     font-family: "Poppins", sans-serif;
     background-color: ${color.secondary};
+    background: transparent;
+    background-color: transparent;
 };
 
 b,
