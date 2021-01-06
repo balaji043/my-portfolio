@@ -2,7 +2,8 @@ import { Programmer } from 'components/Icons';
 import React, { FC } from 'react';
 import { homeHeroTexts } from 'utils';
 import { workPageItem } from 'utils/pages';
-import { HeroContainer, HomeRow, Column1, TextWrapper, Heading, Subtitle, Column2, ImgWrap, Img, Button, ButtonWrapper, ButtonBackground, ButtonIcon } from './HomeHeroElements';
+import { github, linkedin } from 'utils/social-media';
+import { HeroContainer, HomeRow, Column1, TextWrapper, Heading, Subtitle, Column2, ImgWrap, Img, Button, ButtonWrapper, ButtonBackground, ButtonIcon, SocialMediaLink, SocialMediaWrapper, Separator } from './HomeHeroElements';
 
 
 const HomeHero: FC =
@@ -15,9 +16,9 @@ const HomeHero: FC =
                         <Subtitle>{homeHeroTexts.subtitle}</Subtitle>
                     </TextWrapper>
                     <ButtonWrapper>
-                        <ButtonBackground />
-                        <Button to={workPageItem.to} >See me works
-                            {(<ButtonIcon />)}
+                        <Button to={workPageItem.to} >{workPageItem.btnText}
+                            {<ButtonIcon />}
+                            {<ButtonBackground lightBg />}
                         </Button>
                     </ButtonWrapper>
                 </Column1>
@@ -27,6 +28,11 @@ const HomeHero: FC =
                     </ImgWrap>
                 </Column2>
             </HomeRow>
+            <SocialMediaWrapper>
+                <SocialMediaLink href={github.url} target="_blank" >{github.name}</SocialMediaLink>
+                <Separator>/</Separator>
+                <SocialMediaLink href={linkedin.url} target="_blank" >{linkedin.name}</SocialMediaLink>
+            </SocialMediaWrapper>
         </HeroContainer>
     );
 

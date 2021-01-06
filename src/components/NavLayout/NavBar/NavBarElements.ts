@@ -17,6 +17,7 @@ align-items: center;
 position: sticky;
 top: 0px;
 z-index: 999;
+color: ${color.black};
 `
 
 export const NavBarContainer = styled.div`
@@ -25,7 +26,7 @@ justify-content: space-between;
 height: ${navHeight};
 z-index: 1;
 width: 100%;
-align-items: center;
+align-items: flex-start;
 padding-left: 4rem;
 padding-right: 6rem;
 padding-top: 2rem;
@@ -40,7 +41,6 @@ padding-bottom: 2rem;
 
 
 export const NavLogo = styled(LinkRouter)`
-color: ${color.black};
 cursor: pointer;
 align-items: center;
 `
@@ -60,7 +60,6 @@ display: none;
     display: block;
     font-size: 1.8rem;
     cursor: pointer;
-    color: ${color.black}
 }
 `
 

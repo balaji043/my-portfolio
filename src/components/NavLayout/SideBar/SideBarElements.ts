@@ -25,6 +25,7 @@ left: 0;
 transition: 0.4s ease-in-out;
 opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
 top: ${({ isOpen }) => (isOpen ? '0%' : '-200%')};
+color: ${color.white};
 `
 export const SideBarTop = styled.div`
 display: flex;
@@ -46,14 +47,12 @@ color: ${color.white};
 `
 
 export const Icon = styled.div`
-background: transparent;
 font-size: 2rem;
 cursor: pointer;
 outline: none;
 `
 
 export const SideBarWrapper = styled.div`
-color: ${color.white};
 width: 100%;
 margin-top: 42px;
 `

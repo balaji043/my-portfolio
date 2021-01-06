@@ -8,4 +8,5 @@ export default styled.svg.attrs({
 
 export type MyIconProps = {
   className?: string;
+  lightBg?: boolean;
 };
