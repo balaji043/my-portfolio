@@ -1,10 +1,11 @@
+import { BrArrowRight, Circle } from "components/Icons";
 import { LinkRouter } from "components/Router";
 import styled from "styled-components";
 import { color, screenMaxWidth } from "styles";
 
 
 type HeroContainerProps = {
-    lightBg?: boolean;
+lightBg?: boolean;
 }
 
 
@@ -21,11 +22,11 @@ margin-left: auto;
 padding: 2rem 5rem;
 justify-content: center;
 @media screen and (max-width: ${screenMaxWidth}){
-    padding: 0 1rem;
+padding: 0 1rem;
 }
 `
 type RowProps = {
-    imageStart?: boolean;
+imageStart?: boolean;
 }
 export const HomeRow = styled.div<RowProps>`
 display: grid;
@@ -35,7 +36,7 @@ align-items: center;
 grid-template-areas: ${({ imageStart }) => (imageStart ? `'col2 col1'` : `'col1 col2'`)};
 background-color: inherit;
 @media screen and (max-width: 768px){
-    grid-template-areas: ${({ imageStart }) => (imageStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+grid-template-areas: ${({ imageStart }) => (imageStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
 }
 `
 export const Column1 = styled.div`
@@ -67,7 +68,7 @@ color: inherit;
 background-color: inherit;
 
 @media screen and (max-width: 480px){
-    font-size: 32px;
+font-size: 32px;
 }
 `
 
@@ -77,7 +78,6 @@ margin-bottom: 35px;
 font-size: 18px;
 line-height: 24px;
 background-color: inherit;
-
 color: inherit;
 `
 
@@ -87,10 +87,25 @@ justify-content: flex-start;
 background-color: inherit;
 color: inherit;
 `
+export const ButtonBackground = styled(Circle)`
+position: relative;
+z-index: 0;
+left: 2rem;
+width: 3rem;
+height: 3rem;
+`
 
 export const Button = styled(LinkRouter)`
-background-color: inherit;
+background-color: transparent;
 color: inherit;
+z-index: 1;
+display: flex;
+justify-content: start;
+align-items: center;
+`
+
+export const ButtonIcon = styled(BrArrowRight)`
+    margin-left: 1rem;
 `
 
 export const Column2 = styled.div`

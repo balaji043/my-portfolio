@@ -1,4 +1,4 @@
-import { AppLogo, CloseSideBarIcon } from 'components/Icons';
+import { AppLogo, BrCloseIcon } from 'components/Icons';
 import { LinkRouter } from 'components/Router';
 import styled from 'styled-components'
 
@@ -41,7 +41,7 @@ height: 36px;
 fill: ${color.white};
 `
 
-export const CloseIcon = styled(CloseSideBarIcon)`
+export const CloseIcon = styled(BrCloseIcon)`
 color: ${color.white};
 `
 

@@ -1,4 +1,4 @@
-import { MenuBarIcon } from 'components/Icons'
+import { BrMenuBarIcon } from 'components/Icons'
 import React, { FC } from 'react'
 import { homePageItem, PageItem, pageItems } from 'utils/pages'
 import { MobileMenuIcon, Nav, NavBarContainer, NavIcon, NavItem, NavLink, NavLogo, NavMenu } from './NavBarElements'
@@ -21,7 +21,7 @@ const NavBar: FC<NavBarProps> = ({ toggleSideBar }) => {
                         <NavIcon />
                     </NavLogo>
                     <MobileMenuIcon onClick={toggleSideBar}>
-                        <MenuBarIcon />
+                        <BrMenuBarIcon />
                     </MobileMenuIcon>
                     <NavMenu>
                         {pageItems.map(e => navItem(e))}

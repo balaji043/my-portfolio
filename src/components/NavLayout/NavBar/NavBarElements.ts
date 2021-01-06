@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { LinkRouter } from 'components/Router';
 import { color } from 'styles';
-import AppLogo from 'assets/svgs/Logo';
+import AppLogo from 'assets/svgs/AppLogo';
 
 const screenMaxWidth = `960px`;
 const navHeight = `90px`;
