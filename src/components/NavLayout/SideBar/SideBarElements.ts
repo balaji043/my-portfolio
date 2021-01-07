@@ -1,4 +1,4 @@
-import { AppLogo, BrCloseIcon } from 'components/Icons';
+import { AppLogo, AppCloseIcon } from 'components/Icons';
 import { LinkRouter } from 'components/Router';
 import styled from 'styled-components'
 
@@ -26,6 +26,7 @@ transition: 0.4s ease-in-out;
 opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
 top: ${({ isOpen }) => (isOpen ? '0%' : '-200%')};
 color: ${color.white};
+pointer-events: ${({ isOpen }) => isOpen ? 'all' : 'none'};
 `
 export const SideBarTop = styled.div`
 display: flex;
@@ -42,7 +43,7 @@ height: 36px;
 fill: ${color.white};
 `
 
-export const CloseIcon = styled(BrCloseIcon)`
+export const CloseIcon = styled(AppCloseIcon)`
 color: ${color.white};
 `
 

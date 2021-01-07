@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { LinkRouter } from 'components/Router';
 import { color } from 'styles';
 import AppLogo from 'assets/svgs/AppLogo';
+import { AppCircle } from 'components/Icons';
 
 const screenMaxWidth = `960px`;
 const navHeight = `90px`;
@@ -32,10 +33,10 @@ padding-right: 6rem;
 padding-top: 2rem;
 padding-bottom: 2rem;
 @media screen and (max-width: ${screenMaxWidth}) {
-    align-items: flex-start;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-left: 1rem;
+align-items: flex-start;
+padding-right: 1rem;
+padding-top: 0.5rem;
+padding-left: 1rem;
 }
 `
 
@@ -49,17 +50,17 @@ export const NavIcon = styled(AppLogo)`
 width: ${largeIconSize};
 height: ${largeIconSize};
 @media screen and (max-width: ${screenMaxWidth}) {
-    width: ${smallIconSize};
-    height: ${smallIconSize};
+width: ${smallIconSize};
+height: ${smallIconSize};
 }
 `
 
 export const MobileMenuIcon = styled.div`
 display: none;
 @media screen and (max-width: ${screenMaxWidth}) {
-    display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
+display: block;
+font-size: 1.8rem;
+cursor: pointer;
 }
 `
 
@@ -69,7 +70,7 @@ align-items: center;
 list-style: none;
 text-align: center;
 @media screen and (max-width: ${screenMaxWidth}){
-    display: none;
+display: none;
 }
 `
 
@@ -87,8 +88,16 @@ font-weight: 600;cursor: pointer;
 font-size: 14px;
 padding-right: .6rem;
 padding-left: .6rem;
-&:active {
-    border-bottom: 3px solid ${color.black};   
-    font-weight: bold;
-}
+position: relative;
+`
+
+
+export const NavLinkActiveIndicator = styled(AppCircle)`
+fill: ${color.black};
+position: absolute;
+bottom: 10%;
+left: 46%;
+width: 0.3rem;
+height: 0.3rem;
+display: ${(active) => active ? `block` : 'none'}
 `

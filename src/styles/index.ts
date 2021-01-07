@@ -3,11 +3,6 @@ import styled, { createGlobalStyle } from "styled-components";
 export const screenMaxWidth = `768px`;
 
 
-export type Color = {
-    white: string;
-    black: string;
-    secondary: string;
-}
 export const color = {
     white: `#ffffff`,
     black: `#363636`,

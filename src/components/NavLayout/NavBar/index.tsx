@@ -1,7 +1,8 @@
-import { BrMenuBarIcon } from 'components/Icons'
+import { AppMenuBarIcon } from 'components/Icons'
 import React, { FC } from 'react'
+import { useLocation } from 'react-router-dom'
 import { homePageItem, PageItem, pageItems } from 'utils/pages'
-import { MobileMenuIcon, Nav, NavBarContainer, NavIcon, NavItem, NavLink, NavLogo, NavMenu } from './NavBarElements'
+import { MobileMenuIcon, Nav, NavBarContainer, NavIcon, NavItem, NavLink, NavLinkActiveIndicator, NavLogo, NavMenu } from './NavBarElements'
 
 type NavBarProps = {
     toggleSideBar: () => void;
@@ -9,9 +10,13 @@ type NavBarProps = {
 
 const NavBar: FC<NavBarProps> = ({ toggleSideBar }) => {
 
+    const { pathname } = useLocation();
+
     const navItem = (pageItem: PageItem) =>
         <NavItem key={pageItem.to}>
-            <NavLink to={pageItem.to}>{pageItem.title}</NavLink>
+            <NavLink to={pageItem.to}>{pageItem.title}
+                {pathname === pageItem.to ? <NavLinkActiveIndicator /> : null}
+            </NavLink>
         </NavItem>;
     return (
         <>
@@ -21,7 +26,7 @@ const NavBar: FC<NavBarProps> = ({ toggleSideBar }) => {
                         <NavIcon />
                     </NavLogo>
                     <MobileMenuIcon onClick={toggleSideBar}>
-                        <BrMenuBarIcon />
+                        <AppMenuBarIcon />
                     </MobileMenuIcon>
                     <NavMenu>
                         {pageItems.map(e => navItem(e))}

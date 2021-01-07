@@ -1,5 +1,3 @@
-import { BrArrowRight, Circle } from "components/Icons";
-import { LinkRouter } from "components/Router";
 import styled from "styled-components";
 import { color, screenMaxWidth } from "styles";
 
@@ -79,40 +77,6 @@ font-size: 18px;
 line-height: 24px;
 background-color: inherit;
 color: inherit;
-`
-
-export const ButtonWrapper = styled.div`
-display: flex;
-justify-content: flex-start;
-background-color: inherit;
-color: inherit;
-position: relative;
-bottom: 0px;
-`
-
-type ButtonBackgroundProps = {
-    lightBg?: boolean;
-}
-export const ButtonBackground = styled(Circle)<ButtonBackgroundProps>`
-position: relative;
-z-index: -1;
-left: -10rem;
-width: 3rem;
-height: 3rem;
-pointer-events: none;
-`
-
-export const Button = styled(LinkRouter)`
-background-color: transparent;
-color: inherit;
-z-index: 1;
-display: flex;
-justify-content: start;
-align-items: center;
-`
-
-export const ButtonIcon = styled(BrArrowRight) `
-    margin-left: 1rem;
 `
 
 export const Column2 = styled.div`

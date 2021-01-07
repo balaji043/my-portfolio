@@ -1,8 +1,8 @@
-import { Circle, BrArrowRight } from "components/Icons";
-import { LinkRouter } from "components/Router";
+import Button from 'components/Button';
 import styled from "styled-components";
-import { color } from "styles";
+import { color, screenMaxWidth } from "styles";
 import { contactsPageItem } from "utils/pages";
+import { socialMedias } from 'utils/social-media';
 
 const footerTexts = {
     heading: `Let's work together`,
@@ -17,21 +17,15 @@ const Footer = () => {
                 <Heading>{footerTexts.heading}</Heading>
                 <Subtitle>{footerTexts.subtitle}</Subtitle>
             </TextWrapper>
-            <ButtonWrapper>
-                <ButtonWrapper>
-                    <Button to={contactsPageItem.to} >
-                        {contactsPageItem.btnText}
-                        {<ButtonIcon />}
-                        {<ButtonBackground />}
-                    </Button>
-                </ButtonWrapper>
-            </ButtonWrapper>
+            <Button href={contactsPageItem.to} text={contactsPageItem.btnText} />
             <BottomSection>
-                <WebSiteName>{footerTexts.websiteName}</WebSiteName>
                 <SocialMediaWrapper>
-                    <SocialMediaIcon>
-                    </SocialMediaIcon>
+                    {socialMedias.map(e =>
+                        <SocialMediaIcon key={e.name} href={e.url} target="_blank" >
+                            <e.icon />
+                        </SocialMediaIcon>)}
                 </SocialMediaWrapper>
+                <WebSiteName>{footerTexts.websiteName}</WebSiteName>
             </BottomSection>
         </FooterContainer>
     )
@@ -41,59 +35,53 @@ export default Footer;
 
 
 const FooterContainer = styled.div`
-padding: 5rem;
+padding: 1rem 3rem;
 color: ${color.white};
 background-color: ${color.blackFooter};
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: space-around;
 align-items: center;
 text-align: center;
+min-height: 400px;
+@media screen and (max-width: ${screenMaxWidth}) {
+padding: 1rem 2rem;
+text-align: start;
+}
 `
 
 const TextWrapper = styled.div`
-padding: 0;
+padding: 0.5rem 0;
 `
 
 const Heading = styled.h1`
 padding: 0;
+font-size: xxx-large;
+@media screen and (max-width: ${screenMaxWidth}){
+font-size: xx-large;
+}
 `
-
 const Subtitle = styled.p`
-padding: 20px 0px;
+padding: 0.5rem 0;
+margin: 0;
 font-size: small;
 `
 
-const ButtonBackground = styled(Circle)`
-position: relative;
-z-index: -1;
-left: -8rem;
-width: 3rem;
-height: 3rem;
-pointer-events: none;
-`
-
-const ButtonIcon = styled(BrArrowRight)`
-margin-left: 1rem;
-`
-
-const ButtonWrapper = styled.div`
+const BottomSection = styled.div`
+ width: 100%;
 display: flex;
-justify-content: flex-start;
-position: relative;
-bottom: 0px;
-left: -1rem;
-`
-
-export const Button = styled(LinkRouter)`
-z-index: 1;
-display: flex;
-justify-content: start;
+flex-direction: column;
+justify-content: space-between;
 align-items: center;
 `
+const WebSiteName = styled.p`
+font-size: x-small;
+margin: 0px;
+`
 
-const BottomSection = styled.div``
-const WebSiteName = styled.p``
-
-const SocialMediaWrapper = styled.div``
-const SocialMediaIcon = styled.div``
+const SocialMediaWrapper = styled.div`
+margin-bottom: 1rem;
+`
+const SocialMediaIcon = styled.a`
+margin: 1rem;
+`
