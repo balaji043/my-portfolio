@@ -21,6 +21,7 @@ const RecentWorks: FC<Props> = (prop) => {
             </IntroSection>
             <WorksWrapper>
                 <WorksItem />
+                <WorksItem />
             </WorksWrapper>
         </RecentWorksContainer>
     )

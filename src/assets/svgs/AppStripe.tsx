@@ -6,8 +6,8 @@ import { color } from 'styles';
 
 const AppStripe: FC<MyIconProps> = ({ className, lightBg = false }) => {
     return (
-        <Svg className={className} width="34" height="4" viewBox="0 0 34 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="34" height="4" fill={lightBg ? color.lightCircle : color.darkCircle} />
+        <Svg className={className} width="400" height="4" viewBox="0 0 400 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="4" fill={lightBg ? color.lightCircle : color.darkCircle} />
         </Svg>
     )
 }

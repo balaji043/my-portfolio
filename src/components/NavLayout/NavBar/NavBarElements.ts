@@ -32,6 +32,7 @@ padding-left: 4rem;
 padding-right: 6rem;
 padding-top: 2rem;
 padding-bottom: 2rem;
+transition: all 0.5s ease-in-out;
 @media screen and (max-width: ${screenMaxWidth}) {
 align-items: flex-start;
 padding-right: 1rem;
@@ -44,11 +45,13 @@ padding-left: 1rem;
 export const NavLogo = styled(LinkRouter)`
 cursor: pointer;
 align-items: center;
+color: inherit;
 `
 
 export const NavIcon = styled(AppLogo)`
 width: ${largeIconSize};
 height: ${largeIconSize};
+transition: all 0.5s ease-in-out;
 @media screen and (max-width: ${screenMaxWidth}) {
 width: ${smallIconSize};
 height: ${smallIconSize};
@@ -79,7 +82,7 @@ height: 45px;
 `
 
 export const NavLink = styled(LinkRouter)`
-color: ${color.black};
+color: inherit;
 display: flex;
 align-items: center;
 text-decoration: none;
@@ -93,7 +96,7 @@ position: relative;
 
 
 export const NavLinkActiveIndicator = styled(AppCircle)`
-fill: ${color.black};
+color: ${color.black};
 position: absolute;
 bottom: 10%;
 left: 46%;

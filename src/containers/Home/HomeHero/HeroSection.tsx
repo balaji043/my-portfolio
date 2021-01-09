@@ -1,4 +1,4 @@
-import Button from 'components/Button';
+import Button from 'components/AppButton';
 import { AppProgrammer } from 'components/Icons';
 import React, { FC } from 'react';
 import { homeHeroTexts } from 'utils';

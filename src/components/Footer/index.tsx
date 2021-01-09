@@ -1,4 +1,4 @@
-import Button from 'components/Button';
+import Button from 'components/AppButton';
 import styled from "styled-components";
 import { color, screenMaxWidth } from "styles";
 import { contactsPageItem } from "utils/pages";

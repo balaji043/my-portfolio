@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { color, screenMaxWidth } from "styles";
-import AppButton from 'components/Button';
+import { color } from "styles";
+import AppButton from 'components/AppButton';
 import { FC } from "react";
 import AppStripe from "assets/svgs/AppStripe";
 
@@ -44,31 +44,39 @@ margin-right: auto;
 margin-left: auto;
 padding: 2rem 5rem;
 justify-content: flex-start;
-color: ${color.darkCircle};
+color: #656565;
+transition: padding 0.5s ease-in-out;
+
 &:hover{
     color: ${color.blackFooter};
+    padding: 3rem 6rem;
 }
 `
 
 const Coloumn1 = styled.div`
 display: flex;
-align-items: center;
+align-items: flex-start;
 position: relative;
 `
 
 const StripeWrapper = styled(AppStripe)`
 position: absolute;
-left: -25%;
-rect: {
-    width: 64px;
+left: -220%;
+top: 7%;
+&:hover {
+    fill: ${color.blackFooter};
 }
 `
 
 const SlNo = styled.div`
 `
-const TextWrapper = styled.div``
+const TextWrapper = styled.div`
+margin-left: 20px;
+`
 
-const Heading = styled.h1``
+const Heading = styled.h1`
+margin-bottom: 20px;
+`
 
 const Subtitle = styled.p``
 
