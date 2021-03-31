@@ -20,7 +20,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Poppins", sans-serif;
     background-color: ${color.secondary};
     background: transparent;
-    background-color: transparent;
 };
 
 b,

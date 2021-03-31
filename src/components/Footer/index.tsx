@@ -21,7 +21,7 @@ const Footer = () => {
             <BottomSection>
                 <SocialMediaWrapper>
                     {socialMedias.map(e =>
-                        <SocialMediaIcon key={e.name} href={e.url} target="_blank" >
+                        <SocialMediaIcon key={e.name} href={e.url} target="_blank" aria-label={e.name}>
                             <e.icon />
                         </SocialMediaIcon>)}
                 </SocialMediaWrapper>

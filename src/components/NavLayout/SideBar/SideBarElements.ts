@@ -57,7 +57,7 @@ export const SideBarWrapper = styled.div`
 width: 100%;
 margin-top: 42px;
 `
-export const SideBarMenu = styled.ul`
+export const SideBarMenu = styled.div`
 display: grid;
 grid-template-columns: 1fr;
 grid-template-rows: repeat(6, 80px);

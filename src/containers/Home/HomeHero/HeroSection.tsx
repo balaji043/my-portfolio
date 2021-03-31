@@ -20,12 +20,12 @@ const HomeHero: FC =
                 </Column1>
                 <Column2>
                     <ImgWrap>
-                        <Img src={AppProgrammer} />
+                        <Img src={AppProgrammer} alt="Programmer" />
                     </ImgWrap>
                 </Column2>
             </HomeRow>
             <SocialMediaWrapper>
-                <SocialMediaLink href={github.url} target="_blank" >{github.name}</SocialMediaLink>
+                <SocialMediaLink href={github.url} rel="noreferrer" target="_blank" >{github.name}</SocialMediaLink>
                 <Separator>/</Separator>
                 <SocialMediaLink href={linkedin.url} target="_blank" >{linkedin.name}</SocialMediaLink>
             </SocialMediaWrapper>

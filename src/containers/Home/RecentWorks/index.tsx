@@ -1,6 +1,5 @@
 import { FC } from 'react'
-import { Heading, Subtitle } from '../HomeHero/HomeHeroElements'
-import { RecentWorksContainer, IntroSection, WorksWrapper } from './RecentWorksElements'
+import { RecentWorksContainer, Heading, Subtitle,IntroSection, WorksWrapper } from './RecentWorksElements'
 import WorksItem from 'components/WorkItem';
 
 interface Props {
@@ -8,7 +7,7 @@ interface Props {
 }
 
 const recentWorksText = {
-    heading: `Crafted with love`,
+    heading: `Crafted with love.`,
     subtitle: `These are a selection of my recent works`,
 }
 

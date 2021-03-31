@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { color } from "styles";
+import { color, screenMaxWidth } from "styles";
 import AppButton from 'components/AppButton';
 import { FC } from "react";
 import AppStripe from "assets/svgs/AppStripe";
-
+import Work from 'assets/images/k-app.png';
 interface Props {
 
 }
@@ -12,66 +12,71 @@ const workDetails = {
     slNo: `01`,
     heading: `Movx`,
     subtitle: `Built with something`,
-    image: ``
+    image: Work
 }
 const WorksItem: FC<Props> = (props) =>
     <WorksContainer>
-        <Coloumn1>
-            <StripeWrapper lightBg />
-            <SlNo>
+        <StripeWrapper lightBg />
+        <SlNo>
                 {workDetails.slNo}
             </SlNo>
+          
             <TextWrapper>
                 <Heading>{workDetails.heading}</Heading>
                 <Subtitle>{workDetails.subtitle}</Subtitle>
             </TextWrapper>
-        </Coloumn1>
-        <Column2>
-            <AppButton href="/works" text="View Project" lightBg />
-            <WorkImage />
-        </Column2>
+        <AppButton href="/works" text="View Project" lightBg />
     </WorksContainer>
 
 export default WorksItem;
 
 const WorksContainer = styled.div`
+color: ${color.black};
 background-color: ${color.secondary};
-min-height: 300px;
-display: grid;
+min-height: 200px;
 z-index: 1;
 width: 100%;
-margin-right: auto;
-margin-left: auto;
-padding: 2rem 5rem;
-justify-content: flex-start;
-color: #656565;
+padding: 2rem 10rem;
+border-bottom: 2px solid ${color.lightCircle};
 transition: padding 0.5s ease-in-out;
-
-&:hover{
-    color: ${color.blackFooter};
-    padding: 3rem 6rem;
-}
-`
-
-const Coloumn1 = styled.div`
 display: flex;
+justify-content: flex-start;
 align-items: flex-start;
 position: relative;
+&:hover {
+    color: ${color.blackFooter};
+    padding: 3rem 12rem;
+    background-color: ${color.white};
+    border-top: 1px solid ${color.black};
+    border-bottom: 1px solid ${color.black};
+    @media screen and (max-width: ${screenMaxWidth}) {
+        padding: 2rem 2rem;
+    }
+}
+
+@media screen and (max-width: ${screenMaxWidth}) {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
 `
 
 const StripeWrapper = styled(AppStripe)`
 position: absolute;
-left: -220%;
-top: 7%;
+left: -22%;
+top: 10%;
 &:hover {
     fill: ${color.blackFooter};
 }
 `
 
-const SlNo = styled.div`
+const SlNo = styled.h4`
+color: ${color.darkCircle};
+margin: 1% 20px;
 `
 const TextWrapper = styled.div`
-margin-left: 20px;
+flex-grow: 1;
+padding-top: 0px;
 `
 
 const Heading = styled.h1`
@@ -79,7 +84,3 @@ margin-bottom: 20px;
 `
 
 const Subtitle = styled.p``
-
-const Column2 = styled.div``
-
-const WorkImage = styled.img``

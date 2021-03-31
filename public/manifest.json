@@ -2,8 +2,8 @@
   "short_name": "balaji043",
   "name": "Balaji Ramasamy",
   "icons": [{
-      "src": "/public/logo.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "/logo-16x16.svg",
+      "sizes": "16x16",
       "type": "image/x-icon"
     },
     {

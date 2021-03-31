@@ -22,7 +22,7 @@ const NavBar: FC<NavBarProps> = ({ toggleSideBar }) => {
         <>
             <Nav>
                 <NavBarContainer>
-                    <NavLogo to={homePageItem.to}>
+                    <NavLogo aria-label="home" to={homePageItem.to}  >
                         <NavIcon />
                     </NavLogo>
                     <MobileMenuIcon onClick={toggleSideBar}>
